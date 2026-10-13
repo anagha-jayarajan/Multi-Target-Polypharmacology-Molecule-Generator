@@ -1,0 +1,66 @@
+# ==============================================================================
+# Multi-Target Polypharmacology Data Preparation Configuration
+# Target Pair: EGFR + HER2 (ERBB2)
+# ==============================================================================
+
+# General Project Settings
+project: polypharm
+random_seed: 42
+output_dir: outputs
+
+# Target Definitions & Database Identifiers
+output_dir: "outputs"
+
+targets:
+  EGFR:
+    primary_pdb: "1XKK"
+    secondary_pdb: "1M17"
+    chembl_id: "CHEMBL203"
+  HER2:
+    primary_pdb: "3PP0"
+    secondary_pdb: "3POZ"
+    chembl_id: "CHEMBL1824"
+
+structures:
+  1XKK:
+    chain: "A"
+    ligand_resname: "FMM"
+    anchor_residues:
+      hinge: 793
+      gatekeeper: 790
+      catalytic_lys: 745
+      dfg_asp: 855
+  1M17:
+    chain: "A"
+    ligand_resname: "AQ4"
+    anchor_residues:
+      hinge: 793
+      gatekeeper: 790
+      catalytic_lys: 745
+      dfg_asp: 855
+  3PP0:
+    chain: "A"
+    ligand_resname: "03Q"
+    anchor_residues:
+      hinge: 805
+      gatekeeper: 797
+      catalytic_lys: 753
+      dfg_asp: 863
+  3POZ:
+    chain: "A"
+    ligand_resname: "032"
+    anchor_residues:
+      hinge: 805
+      gatekeeper: 797
+      catalytic_lys: 753
+      dfg_asp: 863
+
+protein_prep:
+  add_hydrogens_ph: 7.4
+
+ligand_curation:
+  max_activity_nm: 1000.0
+  activity_types:
+    - "IC50"
+    - "Ki"
+  split_ratio: 0.8
