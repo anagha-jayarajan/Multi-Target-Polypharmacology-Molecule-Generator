@@ -1,0 +1,3 @@
+target,best_score,top_pose_rmsd,workflow_ok,min_rmsd_over_modes,n_modes
+EGFR,-11.096,2.473600923564218,False,1.3425109872016159,9
+HER2,-11.495,0.6193310841294889,True,0.6193310841294889,4
