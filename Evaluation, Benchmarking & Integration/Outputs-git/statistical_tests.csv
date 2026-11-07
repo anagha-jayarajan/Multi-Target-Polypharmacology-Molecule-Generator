@@ -1,0 +1,17 @@
+comparison,subset,metric,n_a,n_b,median_a,median_b,effect_a_gt_b,p_value
+GA-optimised vs filtered single-target baseline,all logged,dock_mean,66,13,-9.9555,-8.182,-0.7202797202797202,4.522353629680185e-05
+GA-optimised vs filtered single-target baseline,all logged,lig_eff,66,13,0.33984375,0.3557391304347826,-0.044289044289044344,0.8067586356669527
+GA-optimised vs filtered single-target baseline,all logged,qed,66,13,0.5152040663101447,0.6557467941889212,-0.2727272727272727,0.12346771922722063
+GA-optimised vs filtered single-target baseline,all logged,sa_score,66,13,2.8947114360793273,3.742801001661187,-0.8624708624708625,1.0312305983094643e-06
+GA-optimised vs filtered single-target baseline,novel only,dock_mean,40,13,-9.828,-8.182,-0.6961538461538461,0.00019043502838293698
+GA-optimised vs filtered single-target baseline,novel only,lig_eff,40,13,0.34774354838709676,0.3557391304347826,0.019230769230769162,0.9258828652977943
+GA-optimised vs filtered single-target baseline,novel only,qed,40,13,0.4963083821922619,0.6557467941889212,-0.28076923076923077,0.13393771048031836
+GA-optimised vs filtered single-target baseline,novel only,sa_score,40,13,2.996922723956698,3.742801001661187,-0.7961538461538462,1.9647266755859027e-05
+RL-optimised vs filtered single-target baseline,all logged,dock_mean,225,13,-8.9575,-8.182,-0.5117948717948718,0.0019413044550225798
+RL-optimised vs filtered single-target baseline,all logged,lig_eff,225,13,0.3602916666666667,0.3557391304347826,0.03111111111111109,0.8520990007710253
+RL-optimised vs filtered single-target baseline,all logged,qed,225,13,0.612894231450533,0.6557467941889212,-0.029743589743589705,0.8586012961514239
+RL-optimised vs filtered single-target baseline,all logged,sa_score,225,13,2.4134719408060015,3.742801001661187,-0.9398290598290598,1.250731442910438e-08
+RL-optimised vs filtered single-target baseline,novel only,dock_mean,161,13,-9.0115,-8.182,-0.48303870043000474,0.0038457758642480014
+RL-optimised vs filtered single-target baseline,novel only,lig_eff,161,13,0.34342,0.3557391304347826,-0.07310081223124698,0.663554197433003
+RL-optimised vs filtered single-target baseline,novel only,qed,161,13,0.579566521430336,0.6557467941889212,-0.10176779741997133,0.5440323092864082
+RL-optimised vs filtered single-target baseline,novel only,sa_score,161,13,2.470513592979785,3.742801001661187,-0.915910176779742,4.171517317524243e-08

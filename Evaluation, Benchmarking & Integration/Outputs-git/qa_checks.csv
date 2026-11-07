@@ -1,0 +1,17 @@
+check,status,detail
+Redocking EGFR,FAIL,top-pose RMSD 2.47 A (pass <= 2.0); best of 9 modes 1.34 A; best score -11.10
+Redocking HER2,OK,top-pose RMSD 0.62 A (pass <= 2.0); best of 4 modes 0.62 A; best score -11.49
+Docking box EGFR centred on crystal ligand,OK,box centre is 0.7 A from the FMM ligand centre; box sides 20 x 17 x 23 A
+Docking box HER2 centred on crystal ligand,FAIL,box centre is 25.1 A from the 03Q ligand centre; box sides 36 x 45 x 53 A (Person 1's docking_boxes.json is wrong for this target; Person 4's script uses docking_boxes_fixed.json instead)
+Box volume EGFR vs HER2 (committed json),WARN,HER2 box is 11.0x the volume of EGFR; scores are only comparable if both targets were docked with similar boxes
+docking_boxes_fixed.json committed,WARN,"Person 4's script reads/writes docking_boxes_fixed.json but it is not in the repo, so the boxes behind the committed scores cannot be verified"
+Anchor residue numbers usable (config.yaml),FAIL,cleaned PDB is renumbered 1..352 so UniProt anchors (EGFR hinge 793...) match nothing; script 03's HER2->EGFR alignment is silently skipped and no aligned file exists
+3D geometry of single-target molecules,WARN,7 of 38 molecules contain a bond shorter than 1.1 A (physically impossible; e.g. O-O at 0.4 A); many more have stretched bonds
+Vina exhaustiveness (script default),WARN,default is 4; the script itself recommends 8-32 for final numbers. Confirm which value produced the committed scores (scores at low exhaustiveness are noisy)
+Docking failures (baseline pool),WARN,2 of 15 gate-passing baseline molecules have no docking score
+Pool counts consistent,OK,"manifest 38, SDF 38, scored 38"
+Candidate ID scheme,WARN,DUAL_TARGET.md says IDs are DT_001..DT_038 but the manifest/SDF/scores use P3_001..P3_038; update the doc
+Known-inhibitor docking reference,WARN,no docking scores for known EGFR/HER2 inhibitors are committed (planned for Days 3-5); without them there is no way to say whether e.g. -9 kcal/mol is 'good' for this setup
+Closeness to known actives - GA-optimised,INFO,"median max Tanimoto to a known EGFR/HER2 active = 0.58; 39% have a close analogue (>= 0.7) and 18 of 66 are exact known actives (rediscovered, not newly generated)"
+Closeness to known actives - RL-optimised,INFO,"median max Tanimoto to a known EGFR/HER2 active = 0.56; 29% have a close analogue (>= 0.7) and 22 of 237 are exact known actives (rediscovered, not newly generated)"
+Novelty cross-check vs reward-function value,OK,max |difference| 0.000 over 341 molecules (ours strips salts from the reference set)

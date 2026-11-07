@@ -1,0 +1,11 @@
+# Person 5 evaluation (Scripts/09_evaluate_benchmark.py, Evaluation_Notebook.ipynb)
+rdkit
+pandas
+numpy
+scipy
+matplotlib
+tabulate
+# notebook only
+nbformat
+nbconvert
+ipykernel
