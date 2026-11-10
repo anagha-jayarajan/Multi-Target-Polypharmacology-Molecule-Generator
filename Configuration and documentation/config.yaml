@@ -48,7 +48,7 @@ structures:
       dfg_asp: 863
   3POZ:
     chain: "A"
-    ligand_resname: "032"
+    ligand_resname: "03P"
     anchor_residues:
       hinge: 805
       gatekeeper: 797
