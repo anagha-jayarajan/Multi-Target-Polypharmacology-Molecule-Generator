@@ -3,64 +3,23 @@
 # Target Pair: EGFR + HER2 (ERBB2)
 # ==============================================================================
 
-# General Project Settings
-project: polypharm
-random_seed: 42
-output_dir: outputs
 
-# Target Definitions & Database Identifiers
-output_dir: "outputs"
-
-targets:
-  EGFR:
-    primary_pdb: "1XKK"
-    secondary_pdb: "1M17"
-    chembl_id: "CHEMBL203"
-  HER2:
-    primary_pdb: "3PP0"
-    secondary_pdb: "3POZ"
-    chembl_id: "CHEMBL1824"
-
+# ---------- Structures ----------
 structures:
-  1XKK:
-    chain: "A"
-    ligand_resname: "FMM"
-    anchor_residues:
-      hinge: 793
-      gatekeeper: 790
-      catalytic_lys: 745
-      dfg_asp: 855
-  1M17:
-    chain: "A"
-    ligand_resname: "AQ4"
-    anchor_residues:
-      hinge: 793
-      gatekeeper: 790
-      catalytic_lys: 745
-      dfg_asp: 855
-  3PP0:
-    chain: "A"
-    ligand_resname: "03Q"
-    anchor_residues:
-      hinge: 805
-      gatekeeper: 797
-      catalytic_lys: 753
-      dfg_asp: 863
   3POZ:
-    chain: "A"
-    ligand_resname: "03P"
-    anchor_residues:
-      hinge: 805
-      gatekeeper: 797
-      catalytic_lys: 753
-      dfg_asp: 863
+    target: EGFR
+    chain: A
+    ligand_resname: 03P
+    ligand_name: "TAK-285"
+    ligand_identity: "TAK-285 itself (confirmed)"
+    resolution: 1.50
 
-protein_prep:
-  add_hydrogens_ph: 7.4
+  3PP0:
+    target: HER2
+    chain: A  # File contains chains A and B; use chain A only
+    ligand_resname: 03Q
+    ligand_name: "TAK-285 analog"
+    ligand_identity: "TAK-285 analog; NOT TAK-285 itself"
+    resolution: 2.25
+    engineered_mutations: [706, 711, 712]  # All N-terminal; distance check pending
 
-ligand_curation:
-  max_activity_nm: 1000.0
-  activity_types:
-    - "IC50"
-    - "Ki"
-  split_ratio: 0.8
