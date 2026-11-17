@@ -1,0 +1,5 @@
+condition,n_sampled,n_valid,validity_pct,n_invalid
+prior,500.0,244.0,48.8,256.0
+agent_dual,500.0,255.0,51.0,245.0
+agent_EGFR,500.0,258.0,51.6,242.0
+agent_HER2,500.0,271.0,54.2,229.0
