@@ -1,0 +1,23 @@
+
+seed: 42
+vina:
+  exhaustiveness: 8
+  n_poses: 5
+  cpu: 4
+targets:
+  EGFR:
+    receptor: ../outputs/proteins/EGFR_3POZ_receptor.pdbqt
+    box: ../outputs/docking_boxes/EGFR_3POZ_box.json
+    ref_ligand: ../outputs/ligands/03P_3POZ.sdf
+  HER2:
+    receptor: ../outputs/proteins/HER2_3PP0_receptor.pdbqt
+    box: ../outputs/docking_boxes/HER2_3PP0_box.json
+    ref_ligand: ../outputs/ligands/03Q_3PP0.sdf
+reward:
+  w_dock: 0.6
+  w_qed: 0.2
+  w_sa: 0.2
+  score_best: -12.0
+  score_worst: -4.0
+  imbalance_penalty: 0.1
+  failure_reward: -1.0
