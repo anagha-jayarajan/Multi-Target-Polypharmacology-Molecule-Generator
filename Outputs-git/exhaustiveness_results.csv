@@ -1,7 +1,0 @@
-target,ligand,exhaustiveness,seed,best_score,rmsd_A,atoms_compared,crystal_heavy_atoms,success_le_2A,runtime_s
-EGFR,FMM,1,11,-10.776,2.677,40,40,False,57.6
-EGFR,FMM,1,22,-11.201,3.156,40,40,False,51.9
-EGFR,FMM,2,11,-11.016,2.823,40,40,False,102.3
-EGFR,FMM,2,22,-10.974,2.769,40,40,False,100.1
-EGFR,FMM,4,11,-11.016,2.823,40,40,False,205.1
-EGFR,FMM,4,22,-10.974,2.769,40,40,False,195.3
